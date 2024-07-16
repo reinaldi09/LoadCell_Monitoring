@@ -70,10 +70,21 @@ This project demonstrates a complete system for monitoring load cell data using 
         loadcell3 REAL NOT NULL
     );
     ```
+    Run the Python script:
+    ```bash
+    python Create_database_sensor.py
+    ```
+    
 4. Run the Python script:
     ```bash
-    python app.py
+    python main.py
     ```
+
+    and this script to simulate sending data to flask.
+    ```bash
+    Test_send_data_to_flask.py
+    ```
+    
 5. Access the web interface by navigating to `http://<your_server_ip>:5000` in your browser.
 
 ## Usage

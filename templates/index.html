@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weights Monitoring</title>
+<!--    <link rel="stylesheet" href="style.css">-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="{{ url_for('static', filename='external/Logo_UMB_Putih_besar.webp') }}" alt="Universitas Mercu Buana Logo" class="logo">
+            <h1>Weights Monitoring</h1>
+            <p>Weight calculation using load cell</p>
+        </div>
+         <div class="results">
+            <div class="result">
+                <h2>Load Cell 1</h2>
+                <p>{{ loadcell1 }} KG</p>
+            </div>
+            <div class="result">
+                <h2>Load Cell 2</h2>
+                <p>{{ loadcell2 }} KG</p>
+            </div>
+            <div class="result">
+                <h2>Load Cell 3</h2>
+                <p>{{ loadcell3 }} KG</p>
+            </div>
+         </div>
+        <div class="download">
+            <button onclick="downloadCSV()"><a href="{{ url_for('download_data') }}">Download Data (CSV)</a></button>
+        </div>
+        <div class="footer">
+            <p>Projects By:</p>
+            <p>Patricia Erica</p>
+            <p>___________________</p>
+            <p>All rights reserved © 2024</p>
+        </div>
+    </div>
+
+  <script type="text/javascript">
+                  function refreshPage() {
+                  location.reload();
+                  }
+                // Atur auto-refresh setiap 5 detik
+                  setInterval(refreshPage, 5000);
+  </script>
+</body>
+</html>

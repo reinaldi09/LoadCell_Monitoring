@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100px; /* Adjusted logo size */
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.results {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.result {
+    background-color: #ff7f50;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    flex: 1; /* Allow flexbox to manage the widths */
+    margin: 10px 10px; /* Add some spacing between the results */
+}
+
+.result h2 {
+    margin: 0;
+}
+
+.result p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+    word-wrap: break-word; /* Ensure long numbers break to fit the container */
+}
+
+.download {
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: #ff7f50;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: #ff6347;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .result {
+        width: 100%; /* Make each result take full width on smaller screens */
+        margin: 10px 0;
+    }
+
+    .button {
+        width: 100%; /* Make the button full width */
+        padding: 15px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .result p {
+        font-size: 18px; /* Smaller font size for very small screens */
+    }
+}
